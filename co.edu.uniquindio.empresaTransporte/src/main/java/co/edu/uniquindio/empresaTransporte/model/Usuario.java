@@ -13,7 +13,7 @@ public class Usuario {
     private int edad;
     private int peso;
     private VehiculoPrincipal vehiculo;
-    private List<VehiculoTransporte> listaUsuariosAsociados = new ArrayList<>();
+    private List<VehiculoPasajero> listaUsuariosAsociados = new ArrayList<>();
 
     public Usuario() {
 
@@ -75,7 +75,7 @@ public class Usuario {
         this.vehiculo = vehiculo;
     }
 
-    public List<VehiculoTransporte> getListaUsuariosAsociados() {
+    public List<VehiculoPasajero> getListaUsuariosAsociados() {
         return listaUsuariosAsociados;
     }
 
@@ -85,7 +85,7 @@ public class Usuario {
 
     public Usuario(String nombre, String cedula, String correo, String telefono,
                    int edad, int peso, VehiculoPrincipal vehiculo,
-                   List<VehiculoTransporte> listaUsuariosAsociados) {
+                   List<VehiculoPasajero> listaUsuariosAsociados) {
         this.nombre = nombre;
         this.cedula = cedula;
         this.correo = correo;

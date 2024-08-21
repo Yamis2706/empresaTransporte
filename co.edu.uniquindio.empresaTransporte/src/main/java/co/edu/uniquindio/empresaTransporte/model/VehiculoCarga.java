@@ -9,8 +9,11 @@ public class VehiculoCarga extends VehiculoPrincipal {
     public VehiculoCarga() {
     }
 
-    public VehiculoCarga(String rjf147, String number, String mercedes,
-                         String blanco, double v, int i) {
+
+    public VehiculoCarga(String placa, String modelo, String marca, String color,
+                         double capacidadCarga) {
+        super(placa, modelo, marca, color);
+        this.capacidadCarga = capacidadCarga;
     }
 
     public double getCapacidadCarga() {
@@ -29,6 +32,6 @@ public class VehiculoCarga extends VehiculoPrincipal {
         this.numeroEjes = numeroEjes;
     }
 
-
 }
+
 

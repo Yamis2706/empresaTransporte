@@ -1,20 +1,21 @@
 package co.edu.uniquindio.empresaTransporte.model;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class EmpresaTransporte {
 
+
     private String nombre;
 
     private List<VehiculoCarga> listaVehiculosCarga = new ArrayList<>();
-    private List<VehiculoTransporte> listaVehiculosTransporte = new ArrayList<>();
+    private List<VehiculoPasajero> listaVehiculosPasajeros = new ArrayList<>();
+
     private List<Propietario> listaPropietarios = new ArrayList<>();
-    private List<Usuario> listaUsuarios = new ArrayList<>();
 
     public EmpresaTransporte() {
     }
-
 
     public String getNombre() {
         return nombre;
@@ -32,12 +33,12 @@ public class EmpresaTransporte {
         this.listaVehiculosCarga = listaVehiculosCarga;
     }
 
-    public List<VehiculoTransporte> getListaVehiculosTransporte() {
-        return listaVehiculosTransporte;
+    public List<VehiculoPasajero> getListaVehiculosPasajeros() {
+        return listaVehiculosPasajeros;
     }
 
-    public void setListaVehiculosTransporte(List<VehiculoTransporte> listaVehiculosTransporte) {
-        this.listaVehiculosTransporte = listaVehiculosTransporte;
+    public void setListaVehiculosPasajeros(List<VehiculoPasajero> listaVehiculosPasajeros) {
+        this.listaVehiculosPasajeros = listaVehiculosPasajeros;
     }
 
     public List<Propietario> getListaPropietarios() {
@@ -48,8 +49,6 @@ public class EmpresaTransporte {
         this.listaPropietarios = listaPropietarios;
     }
 
-    public void setListaUsuarios(List<Usuario> listaUsuarios) {
-        this.listaUsuarios = listaUsuarios;
-    }
 }
+
 

@@ -1,25 +1,24 @@
 package co.edu.uniquindio.empresaTransporte.model;
 
-public abstract class VehiculoPrincipal {
+public class VehiculoPrincipal {
 
     private String placa;
     private String modelo;
     private String marca;
     private String color;
 
-    public VehiculoPrincipal (String placa, String modelo, String marca,
-                              String color) {
+    public VehiculoPrincipal() {
+    }
+
+    public VehiculoPrincipal(String placa, String modelo, String marca, String color) {
         this.placa = placa;
         this.modelo = modelo;
         this.marca = marca;
         this.color = color;
     }
 
-    public VehiculoPrincipal() {
-    }
-
-    public String getPlaca(String placa) {
-        return this.placa;
+    public String getPlaca() {
+        return placa;
     }
 
     public void setPlaca(String placa) {
@@ -49,5 +48,17 @@ public abstract class VehiculoPrincipal {
     public void setColor(String color) {
         this.color = color;
     }
+
+
+    @Override
+    public String toString() {
+        return "Vehiculo{" +
+                "placa='" + placa + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", marca='" + marca + '\'' +
+                ", color='" + color + '\'' +
+                '}';
+    }
 }
+
 

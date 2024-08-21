@@ -1,52 +1,62 @@
 package co.edu.uniquindio.empresaTransporte.model;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class Propietario  {
+public class Propietario {
 
     private String nombre;
-    private String cedula;
-    private String correo;
-    private String telefono;
+    private String numeroIdentificacion;
+    private String email;
+    private String numeroCelular;
     private VehiculoPrincipal vehiculo;
+    private int edad;
+
     private List<VehiculoCarga> listaVehiculosAsociados = new ArrayList<>();
+    private List<VehiculoPasajero> listaVehiculosAsociadosPasajeros = new ArrayList<>();
 
 
     public Propietario() {
-
     }
 
-    public String getNombre(String nombre) {
-        return this.nombre;
+    public Propietario(String nombre, String numeroIdentificacion, String email,
+                       String numeroCelular, VehiculoPrincipal vehiculo) {
+        this.nombre = nombre;
+        this.numeroIdentificacion = numeroIdentificacion;
+        this.email = email;
+        this.numeroCelular = numeroCelular;
+        this.vehiculo = vehiculo;
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public String getCedula() {
-        return cedula;
+    public String getNumeroIdentificacion() {
+        return numeroIdentificacion;
     }
 
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
+    public void setNumeroIdentificacion(String numeroIdentificacion) {
+        this.numeroIdentificacion = numeroIdentificacion;
     }
 
-    public String getCorreo() {
-        return correo;
+    public String getEmail() {
+        return email;
     }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public String getNumeroCelular() {
+        return numeroCelular;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setNumeroCelular(String numeroCelular) {
+        this.numeroCelular = numeroCelular;
     }
 
     public VehiculoPrincipal getVehiculo() {
@@ -61,28 +71,24 @@ public class Propietario  {
         return listaVehiculosAsociados;
     }
 
-
     public void setListaVehiculosAsociados(List<VehiculoCarga> listaVehiculosAsociados) {
         this.listaVehiculosAsociados = listaVehiculosAsociados;
     }
 
-    public Propietario(String nombre, String cedula, String correo,
-                       String telefono, VehiculoPrincipal vehiculo,
-                       List<VehiculoCarga> listaVehiculosAsociados ) {
-        super();
+    public int getEdad() {
+        return edad;
     }
 
-    public Propietario(List<VehiculoCarga> listaVehiculosAsociados) {
-        this.listaVehiculosAsociados = listaVehiculosAsociados;
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
 
-
-    public void agregarVehiculoCarga(VehiculoPrincipal vehiculoPrincipal) {
-        this.listaVehiculosAsociados.add(new VehiculoCarga());
-
-    }
-    public void agregarVehiculoTransporte() {
-        this.listaVehiculosAsociados.add(new VehiculoCarga());
+    public List<VehiculoPasajero> getListaVehiculosAsociadosPasajeros() {
+        return listaVehiculosAsociadosPasajeros;
     }
 
+    public void setListaVehiculosAsociadosPasajeros(List<VehiculoPasajero> listaVehiculosAsociadosPasajeros) {
+        this.listaVehiculosAsociadosPasajeros = listaVehiculosAsociadosPasajeros;
+    }
 }
+
