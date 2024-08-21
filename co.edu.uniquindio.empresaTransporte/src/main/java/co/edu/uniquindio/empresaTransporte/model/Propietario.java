@@ -8,11 +8,11 @@ public class Propietario {
     private String numeroIdentificacion;
     private String email;
     private String numeroCelular;
-    private VehiculoPrincipal vehiculo;
     private int edad;
+    private VehiculoPrincipal vehiculo;
 
     private List<VehiculoCarga> listaVehiculosAsociados = new ArrayList<>();
-    private List<VehiculoPasajero> listaVehiculosAsociadosPasajeros = new ArrayList<>();
+    private List<VehiculoPasajero> listaVehiculosPasajeros = new ArrayList<>();
 
 
     public Propietario() {
@@ -59,6 +59,14 @@ public class Propietario {
         this.numeroCelular = numeroCelular;
     }
 
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
     public VehiculoPrincipal getVehiculo() {
         return vehiculo;
     }
@@ -75,20 +83,12 @@ public class Propietario {
         this.listaVehiculosAsociados = listaVehiculosAsociados;
     }
 
-    public int getEdad() {
-        return edad;
-    }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public List<VehiculoPasajero> getListaVehiculosAsociadosPasajeros() {
-        return listaVehiculosAsociadosPasajeros;
-    }
-
-    public void setListaVehiculosAsociadosPasajeros(List<VehiculoPasajero> listaVehiculosAsociadosPasajeros) {
-        this.listaVehiculosAsociadosPasajeros = listaVehiculosAsociadosPasajeros;
+    public Iterable<? extends VehiculoPasajero> getListaVehiculosAsociadosPasajeros() {
+        return listaVehiculosPasajeros;
     }
 }
+    
+
+
 

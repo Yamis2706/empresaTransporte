@@ -1,9 +1,6 @@
 package co.edu.uniquindio.empresaTransporte;
 
-import co.edu.uniquindio.empresaTransporte.model.EmpresaTransporte;
-import co.edu.uniquindio.empresaTransporte.model.Propietario;
-import co.edu.uniquindio.empresaTransporte.model.VehiculoCarga;
-import co.edu.uniquindio.empresaTransporte.model.VehiculoPasajero;
+import co.edu.uniquindio.empresaTransporte.model.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +12,41 @@ public class MainTransporte {
 
         EmpresaTransporte empresaTransporte = inicializarDatos();
 
+        // Capturar datos del Vehículo de Carga
+        System.out.println("Ingrese la placa del vehículo de carga:");
+        String placa = scanner.nextLine();
+
+        System.out.println("Ingrese el modelo del vehículo de carga:");
+        String modelo = scanner.nextLine();
+
+        System.out.println("Ingrese la marca del vehículo de carga:");
+        String marca = scanner.nextLine();
+
+        System.out.println("Ingrese el color del vehículo de carga:");
+        String color = scanner.nextLine();
+
+        System.out.println("Ingrese el peso máximo del vehículo de carga (en kilogramos):");
+        double pesoMaximo = scanner.nextDouble();
+
+        System.out.println("Ingrese el número de ejes del vehículo de carga:");
+        int numeroEjes = scanner.nextInt();
+
+        VehiculoCarga vehiculoCarga = new VehiculoCarga();
+        vehiculoCarga.setPlaca(placa);
+        vehiculoCarga.setModelo(modelo);
+        vehiculoCarga.setMarca(marca);
+        vehiculoCarga.setColor(color);
+
+
+        VehiculoPasajero vehiculoPasajero = new VehiculoPasajero();
+        vehiculoPasajero.setPlaca(placa);
+        vehiculoPasajero.setModelo(modelo);
+        vehiculoPasajero.setMarca(marca);
+        vehiculoPasajero.setColor(color);
+
+
+
+
         System.out.print("Ingrese el número mínimo de ejes para mostrar vehículos: ");
         int ejes = scanner.nextInt();
         mostrarVehiculosCargaMayorEje(empresaTransporte, ejes);
@@ -24,7 +56,7 @@ public class MainTransporte {
         mostrarUsuariosQueSuperanPeso(empresaTransporte, peso);
 
         System.out.print("Ingrese la placa del vehículo para mostrar el número de usuarios transportados: ");
-        String placa = scanner.nextLine();
+        placa = scanner.nextLine();
         mostrarNumeroUsuariosPorPlaca(empresaTransporte, placa);
 
         mostrarPropietariosMayoresDe40(empresaTransporte);

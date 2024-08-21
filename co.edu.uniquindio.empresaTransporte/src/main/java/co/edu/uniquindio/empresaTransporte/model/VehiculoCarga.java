@@ -3,6 +3,7 @@ package co.edu.uniquindio.empresaTransporte.model;
 
 public class VehiculoCarga extends VehiculoPrincipal {
 
+    public VehiculoPrincipal vehiculoCarga;
     private double capacidadCarga;
     private int numeroEjes;
 

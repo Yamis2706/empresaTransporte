@@ -13,7 +13,8 @@ public class Usuario {
     private int edad;
     private int peso;
     private VehiculoPrincipal vehiculo;
-    private List<VehiculoPasajero> listaUsuariosAsociados = new ArrayList<>();
+    private Object listaUsuariosAsociados;
+
 
     public Usuario() {
 
@@ -76,10 +77,12 @@ public class Usuario {
     }
 
     public List<VehiculoPasajero> getListaUsuariosAsociados() {
+        List<VehiculoPasajero> listaUsuariosAsociados = List.of();
         return listaUsuariosAsociados;
     }
 
     public void setListaVehiculosAsociados(List<VehiculoCarga> listaVehiculosAsociados) {
+        Object listaUsuariosAsociados = new Object();
         this.listaUsuariosAsociados = listaUsuariosAsociados;
     }
 

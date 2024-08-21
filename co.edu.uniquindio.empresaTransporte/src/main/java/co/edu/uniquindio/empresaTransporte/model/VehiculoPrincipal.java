@@ -52,7 +52,7 @@ public class VehiculoPrincipal {
 
     @Override
     public String toString() {
-        return "Vehiculo{" +
+        return "VehiculoPrincipal{" +
                 "placa='" + placa + '\'' +
                 ", modelo='" + modelo + '\'' +
                 ", marca='" + marca + '\'' +
